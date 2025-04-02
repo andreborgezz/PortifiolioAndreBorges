@@ -1,0 +1,326 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth; /* Habilita a rolagem suave */
+}
+
+header {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: white;
+    padding: 6px ;
+    text-align: center;
+    width: 100%; /* Garante que o header ocupe toda a largura */
+    margin: 0; /* Remove margens externas */
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2); /* Sombra apenas na parte de baixo */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* PRIMEIRO CONTAINER DA LANDING PAGE */
+.container {
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    padding: 40px 20px;
+    text-align: center;
+    display: flex; /* Enable flexbox for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Full viewport height */
+    position: relative; /* Ensure child elements can use absolute positioning */
+}
+
+.SomeLista { /*Só pra tirar a bolinha preta ali*/
+    color : #ffffff; 
+}
+
+.imgRedes, .imgRedes2, .imgRedes3 {
+    position: absolute; /* Position the images absolutely */
+    right: 80px; /* Align to the right with some padding */
+    display: block; /* Ensure each image is treated as a block element */
+    list-style: none; /* Remove the black dot */
+    transition: transform 0.3s ease; /* Smooth transition for scaling */
+}
+
+.imgRedes {
+    top: 30%; /* Position the first image */
+}
+
+.imgRedes2 {
+    top: 45%; /* Position the second image */
+}
+
+.imgRedes3 {
+    top: 60%; /* Position the third image */
+}
+
+.imgRedes:hover, .imgRedes2:hover, .imgRedes3:hover {
+    transform: scale(1.2); /* Grow the image by 20% on hover */
+}
+
+.boxTtile {
+    align-items: center; /* Centralize conteúdo horizontalmente */
+    text-align: center; /* Centralize o texto */
+    width: 70%; /* Adjust width for better responsiveness */
+    height: auto; /* Adjust height dynamically */
+    background-color: #ffffff; /* Fundo vermelho */
+    display: flex; /* Flexible content */
+    flex-direction: row; /* Alinhar texto e imagem horizontalmente */
+    justify-content: space-between; /* Espaço entre texto e imagem */
+    align-items: center; /* Centralizar verticalmente */
+    padding: 30px; /* Add padding for spacing */
+    border-radius: 10px; /* Add rounded corners */
+}
+
+.TitleText {
+    align-items: center;
+    width: 100%; /* Expand to full width */
+    text-align: center; /* Center-align all text */
+    display: flex; /* Use flexbox for alignment */
+    flex-direction: column; /* Stack texts vertically */
+    justify-content: center; /* Center content vertically */
+}
+
+.ola {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.textoAndre {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 6.5rem; /* Slightly increased font size */
+    font-weight: 700;
+    letter-spacing: -1px;
+    margin: 10px 0; /* Add spacing between texts */
+}
+
+.EuPC {
+    display: flex; /* Flexible content */
+    width: 50%; /* Ocupa metade do espaço */
+    justify-content: flex-end; /* Alinha a imagem à direita */
+    margin-top: 20px;
+}
+
+.EuPC img {
+    max-width: 450px; /* Slightly increased image size */
+    height: auto;
+    border-radius: 50%;
+}
+
+.Seta-wrapper {
+    align-items: center; /* Center the arrow vertically */
+    display: flex;
+    overflow: hidden;
+    position: absolute; /* Position relative to the container */
+    bottom: 40px; /* Aumentar distância do fundo */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%);
+    height: 50px; /* Limit height to prevent overlap */
+    z-index: 10; /* Garantir que a seta fique acima de outros elementos */
+}
+
+/* ANIMAÇÃO DA SETA */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateX(-50%) translateY(0);
+    }
+    50% {
+        transform: translateX(-50%) translateY(-10px);
+    }
+}
+
+.Seta {
+    position: relative; /* Adjust position relative to wrapper */
+    bottom: 0; /* Align at the bottom of the wrapper */
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 100%;
+    font-size: 3rem; /* Adjust size of the arrow */
+    color: #000000; /* Change arrow color to black */
+    animation: bounce 1.5s infinite; /* Add infinite bounce animation */
+    z-index: 10; /* Garantir que a seta fique visível */
+}
+
+.imgSeta {
+    width: 30px; /* Adjust the size as needed */
+    height: auto;
+}
+
+
+/* SEGUNDO CONTAINER DA LANDING PAGE */
+.container2 {
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.tecnologias {
+     font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 2rem;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.textoTec {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 1.5rem;
+    color: #000000;
+    margin-bottom: 40px;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Fixar 4 colunas */
+    gap: 20px;
+    justify-content: center;
+}
+
+.row .col-md-3 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: rgba(241, 241, 241, 0.6); /* Transparent background */
+    backdrop-filter: blur(10px); /* Apply blur effect */
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Increased shadow size and intensity */
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    color: #000000;
+}
+
+.row .col-md-3 img {
+    width: 60px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.row .col-md-3 h4 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.row .col-md-3 p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.row .col-md-3:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.4); /* Increased shadow on hover */
+}
+
+@media (max-width: 1024px) {
+    .row {
+        grid-template-columns: repeat(2, 1fr); /* 2 colunas por linha em telas médias */
+    }
+}
+
+@media (max-width: 768px) {
+    .boxTtile {
+        flex-direction: column; /* Stack content vertically */
+        justify-content: center; /* Center content */
+        text-align: center; /* Center-align text */
+        width: 90%; /* Ensure the container fits within the screen */
+        padding: 20px; /* Adjust padding for smaller screens */
+    }
+
+    .EuPC {
+        width: 100%; /* Make image container full width */
+        justify-content: center; /* Center the image */
+        margin-top: 20px; /* Add spacing */
+    }
+
+    .EuPC img {
+        max-width: 300px; /* Limit image size for smaller screens */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .TitleText {
+        margin-top: 20px; /* Add spacing between image and text */
+        font-size: 1.2rem; /* Adjust text size for better fit */
+    }
+
+    .row {
+        grid-template-columns: repeat(2, 1fr); /* 2x2 layout for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .row {
+        grid-template-columns: repeat(1, 1fr); /* 1 coluna por linha em telas pequenas */
+    }
+}
+
+/* TERCEIRO CONTAINER DA LANDING PAGE*/
+.container3 {
+    background-color: rgb(168, 168, 168);
+    width: 100%;
+    padding: 40px 20px;
+    text-align: center;
+    display: flex; /* Enable flexbox for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Full viewport height */
+    position: relative; /* Ensure child elements can use absolute positioning */
+}
+
+/* Animação de fade-in */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1s ease-in forwards;
+}
+
+/* Animação de fade-out */
+.fade-out {
+    opacity: 1;
+    animation: fadeOut 1s ease-out forwards;
+}
+
+/* Estilos para animação de surgimento */
+.scroll-animate {
+    opacity: 1; /* Torne os elementos visíveis por padrão */
+    transform: translateY(0); /* Remova o deslocamento inicial */
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.scroll-animate.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Keyframes para fade-in */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Keyframes para fade-out */
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+}
